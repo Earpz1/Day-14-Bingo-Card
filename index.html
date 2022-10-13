@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lets play Bingo!</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="bingo-board">
+        <h1>Numbers</h1>
+      </div>
+      <div id="players-card-container">
+        <h1>Your cards</h1>
+        <div id="players-card"></div>
+        <div id="players-card"></div>
+        <div id="players-card"></div>
+        <div id="players-card"></div>
+      </div>
+      <div id="bingo-caller-container">
+        <h1 id="drawn-number">10</h1>
+        <button class="next-number" onclick="generateRandomNumber()">
+          Draw Next Number
+        </button>
+      </div>
+    </div>
+  </body>
+  <script src="js.js"></script>
+</html>
