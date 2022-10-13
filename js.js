@@ -1,4 +1,5 @@
 const allNumbersDrawn = []
+const playersCard = []
 
 window.onload = function () {
   generateBoard()
@@ -37,4 +38,33 @@ function generateRandomNumber() {
 
     markNumberMainBoard(number)
   }
+}
+
+function generatePlayersCard(numberOfCards) {
+  const playerContainer = document.getElementById('players-card-container')
+
+  for (let i = 0; i < numberOfCards; i++) {
+    playersCard.push(i)
+    const createCard = document.createElement('div')
+    const createPlayerNumber = document.createElement('h2')
+
+    createCard.id = 'players-card'
+
+    let count = 0
+    const playersNumbersArray = []
+    while (count < 12) {
+      const createPlayerNumber = document.createElement('h2')
+      createPlayerNumber.classList.add('players-number-container')
+      let playersNumber = Math.floor(Math.random() * 91)
+      createPlayerNumber.innerHTML = playersNumber
+      createCard.appendChild(createPlayerNumber)
+
+      playersNumbersArray.push(playersNumber)
+
+      count++
+    }
+    playersCard.push(playersNumbersArray)
+    playerContainer.appendChild(createCard)
+  }
+  console.log(playersCard)
 }
